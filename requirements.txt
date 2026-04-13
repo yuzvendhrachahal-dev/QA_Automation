@@ -1,0 +1,42 @@
+# ===============================
+# Core Web Framework
+# ===============================
+Flask==3.0.0
+flask-cors
+
+# ===============================
+# Browser Automation
+# ===============================
+playwright==1.42.0
+
+# ===============================
+# Environment & Config
+# ===============================
+python-dotenv==1.0.1
+
+# ===============================
+# AI / LLM Integration (OpenAI)
+# ===============================
+openai==1.10.0
+
+# ===============================
+# Utilities
+# ===============================
+requests==2.31.0
+pydantic==2.6.1
+
+# ===============================
+# Logging & Time Handling
+# ===============================
+python-dateutil==2.8.2
+
+
+# After the installation the libraries install the playwright
+# playwright install
+
+
+# To check th eplaywright   is install or not use the below command and run it in bash/powershell 
+
+# python -c "from playwright.sync_api import sync_playwright; print('OK')"
+
+# if it returns "ok" playwright is installed

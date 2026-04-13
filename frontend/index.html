@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>QA Automation AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="app">
+
+  <header class="header">
+    <h1>QA Automation AI</h1>
+    <p>Automated UI testing powered by AI</p>
+  </header>
+
+  <div class="input-box">
+
+    <div class="field">
+      <label>Test Name<span>*</span></label>
+      <input id="testName" type="text" placeholder="Enter test name" />
+    </div>
+
+    <div class="field">
+      <label>Website URL<span>*</span></label>
+      <input id="url" type="text" placeholder="https://example.com" />
+    </div>
+
+    <div class="field">
+      <label>Test Cases<span>*</span></label>
+      <textarea
+        id="steps"
+        placeholder="One step per line&#10;Example:&#10;Open URL&#10;Click Special&#10;Validate event dates"
+      ></textarea>
+    </div>
+
+    <button onclick="executeTest()">Run Test</button>
+  </div>
+
+  <div id="loader" class="loader" style="display:none;">
+    <div class="spinner"></div>
+    <p>Executing test… Please wait</p>
+  </div>
+
+  <div id="results" style="margin-bottom: 20px;"></div>
+
+  <button
+    id="downloadBtn"
+    style="display:none; margin-top: 30px;"
+    onclick="downloadReport()"
+  >
+    Download Test Report (.html)
+  </button>
+
+</div>
+
+<!-- v9 forces browser to load fresh app.js, bypassing all cache -->
+<script src="app.js?v=10"></script>
+</body>
+</html>

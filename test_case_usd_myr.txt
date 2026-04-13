@@ -1,0 +1,44 @@
+Open URL
+Wait until the page is loaded
+
+Hover Account
+Click Sign IN
+
+Type avtestingteammyr@gmail.com in Username
+Type testAV@myr@146 in Password
+
+Click Button Login
+Wait until the page is loaded
+
+Click Account
+Click button Log Off
+Wait until the page is loaded
+
+Hover Account
+Click Register
+Wait until the page is loaded
+
+Type Srivishnu in first name
+Type Murugavel in Last Name
+Type molivir805@alibto.com in email
+Type testAV@myr@146 in reg password
+Type testAV@myr@146 in confirm password
+Select United States in Select Country
+
+Click button Sign Up
+Wait until page is loaded
+
+
+
+
+
+USD CREDENTIALS: 
+
+user : sobadim278@bitonc.com
+[10:45, 21/02/2026] VINOTHKUMAR G: pass : Srivishnu@123
+
+
+
+
+
+python -m backend.app
