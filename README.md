@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 # QA_TEST_AUTOMATION_TOOL_TESTRIGOR
+=======
+# QA_Automation
+>>>>>>> 24fa10f40d9239c8d092da008c87c40d95ed1d62
