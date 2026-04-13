@@ -2,17 +2,17 @@
 
 ## 📌 Overview
 
-This project is an AI-powered QA automation system designed to simulate and validate user flows such as login, checkout, and payment processes. It leverages browser automation to execute test steps and capture visual evidence for each stage.
+This project is an AI-powered QA automation system designed to simulate and validate user flows such as login, checkout, and payment processes. It uses browser automation to execute test steps and capture screenshots for each stage.
 
 ---
 
-## 🧠 Key Features
+## 🧠 Features
 
-* Automated end-to-end test execution
+* Automated end-to-end testing
 * Step-by-step screenshot capture
-* Modular backend architecture
-* Lightweight frontend interface
-* Support for multiple test scenarios (e.g., USD, MYR flows)
+* Supports multiple flows (e.g., USD, MYR)
+* Backend API-driven architecture
+* Simple frontend UI for triggering flows
 
 ---
 
@@ -21,18 +21,18 @@ This project is an AI-powered QA automation system designed to simulate and vali
 ```
 QA_AI_Automation/
 │
-├── backend/              # Core backend (Flask APIs)
+├── backend/              # Flask backend (API + execution logic)
 │   ├── app.py           # Entry point
 │   ├── config.py        # Configurations
-│   └── engine/          # Automation & execution logic
+│   └── engine/          # Core automation logic
 │
 ├── frontend/            # UI (HTML, CSS, JS)
 │
 ├── storage/
-│   └── runs/            # Stores test execution screenshots
+│   └── runs/            # Stores screenshots of test runs
 │
-├── test_cases.py        # Script to trigger test cases
-├── requirements.txt     # Dependencies
+├── test_cases.py        # Script to trigger automation
+├── requirements.txt     # Python dependencies
 ├── RESTART.bat          # Clean restart script
 └── README.md
 ```
@@ -44,13 +44,44 @@ QA_AI_Automation/
 * **Backend:** Python (Flask)
 * **Automation:** Playwright
 * **Frontend:** HTML, CSS, JavaScript
-* **Storage:** Local file system
+* **Storage:** Local filesystem
 
 ---
 
-## ▶️ Setup Instructions
+## 📦 Prerequisites
 
-### 1. Clone Repository
+Ensure the following are installed:
+
+### 1. Python
+
+* Version: **3.9+**
+* Check:
+
+```
+python --version
+```
+
+---
+
+### 2. Git
+
+* Required for cloning the repository
+
+---
+
+### 3. Playwright Browsers
+
+After installing dependencies, run:
+
+```
+playwright install
+```
+
+---
+
+## ⚡ Installation & Setup
+
+### Step 1: Clone Repository
 
 ```
 git clone https://github.com/yuzvendhrachahal-dev/QA_Automation.git
@@ -59,16 +90,23 @@ cd QA_AI_Automation
 
 ---
 
-### 2. Create Virtual Environment
+### Step 2: Create Virtual Environment
 
 ```
 python -m venv venv
-venv\Scripts\activate   # Windows
+```
+
+Activate:
+
+**Windows**
+
+```
+test\Scripts\activate
 ```
 
 ---
 
-### 3. Install Dependencies
+### Step 3: Install Dependencies
 
 ```
 pip install -r requirements.txt
@@ -76,24 +114,40 @@ pip install -r requirements.txt
 
 ---
 
-### 4. Setup Environment Variables
+### Step 4: Configure Environment Variables
 
-Create a `.env` file in root directory and add required keys:
+Create a `.env` file in the root directory:
 
 ```
 # Example
 API_KEY=your_api_key_here
-```
-
 ---
 
-### 5. Run the Application
+## ▶️ Running the Project
+
+### Option 1: Using Restart Script (Recommended)
 
 ```
 RESTART.bat
 ```
 
-Backend will run at:
+This will:
+
+* Clear Python cache
+* (Optional) Clear previous test screenshots
+* Start the backend server
+
+---
+
+### Option 2: Manual Run
+
+```
+python -m backend.app
+```
+
+---
+
+### Backend will run at:
 
 ```
 http://127.0.0.1:5000
@@ -101,55 +155,122 @@ http://127.0.0.1:5000
 
 ---
 
-### 6. Open Frontend
+## 🌐 Running Frontend
 
-Open:
+Open the file:
 
 ```
 frontend/index.html
+```
+
+OR use VS Code Live Server.
+
+---
+
+## 🧪 Running Test Cases
+
+```
+python test_cases.py
 ```
 
 ---
 
 ## 📂 Output
 
-* Test results and screenshots are stored in:
+Test execution results (screenshots) are stored in:
 
 ```
 storage/runs/
 ```
 
+Each run generates a unique folder with step-by-step screenshots.
+
 ---
 
 ## 🔄 Restart Behavior
 
-The `RESTART.bat` script:
+`RESTART.bat` performs:
 
-* Clears Python cache
-* (Optional) Clears previous test runs
+* Python cache cleanup
+* Deletes old test run screenshots
 * Starts the backend server
 
 ---
 
-## ⚠️ Notes
+## Example Test case
+----
+Open URL
+
+click success homas
+click astroved temple services
+wait until page is loaded
+click astroved temple services for ketu
+wait until page is loaded
+
+click abishekam
+wait 3
+click homa
+wait 3
+click pooja
+wait 3
+
+click add to cart
+wait 2
+click keep shopping
+
+Click 9 Days
+click add to cart
+wait 2
+click keep shopping
+
+Click 11 Days
+click add to cart
+wait 2
+click keep shopping
+
+Click 21 Days
+click add to cart
+wait 2
+click keep shopping
+
+Click 30 Days
+click add to cart
+wait 2
+click keep shopping
+
+Click 48 Days
+click add to cart
+wait 2
+click keep shopping
+
+Click 90 Days
+click add to cart
+wait 2
+click keep shopping
+
+Click 108 Days
+click add to cart
+wait 2
+click keep shopping
+
+Click 180 Days
+click add to cart
+wait 2
+click keep shopping
+
+Click 365 Days
+click add to cart
+wait 2
+click keep shopping
+
+home
+wait until page is loaded
+
+-----
+
+## ⚠️ Important Notes
 
 * `.env` file is not included for security reasons
-* Ensure Playwright dependencies are installed if required
-* This is a development setup (not production optimized)
-
----
-
-## 🚀 Future Enhancements
-
-* CI/CD integration
-* Cloud storage for test artifacts
-* Advanced reporting dashboard
-* AI-based test generation
-
----
-
-## 👤 Maintainer
-
-Nivash R N
-
----
+* Ensure Playwright is installed properly
+* This setup is for development (not production-ready)
+* Run from project root directory
